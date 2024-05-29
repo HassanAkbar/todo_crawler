@@ -47,9 +47,6 @@ RSpec.describe TodoCrawler do
         allow(Net::HTTP)
           .to receive(:get_response)
           .and_return(response)
-        # allow(Net::HTTP)
-        #   .to receive(:get_response)
-        #   .and_raise(Net::ReadTimeout)
 
         response = described_class.new(id).call
 

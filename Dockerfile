@@ -5,4 +5,4 @@ WORKDIR /app
 
 ADD . /app
 
-ENTRYPOINT ["/usr/local/bin/ruby", "/app/cli"]
+ENTRYPOINT ["/usr/local/bin/ruby", "/app/exe/cli"]

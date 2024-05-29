@@ -3,7 +3,7 @@
 require "rspec"
 require "json"
 
-require_relative "../todo_crawler"
+require_relative "../lib/todo_crawler"
 
 RSpec.describe TodoCrawler do
   let(:id) { 2 }

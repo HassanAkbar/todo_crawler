@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "todo_crawler"
+require_relative "../lib/todo_crawler"
 
 def main
   threads = []

@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require_relative "todo_crawler"
+
+def main
+  threads = []
+
+  (2..40).step(2).each do |num|
+    threads << Thread.new do
+      response = TodoCrawler.call(num)
+      todo = response[:todo]
+
+      puts "ID: #{todo['id']}, Title: #{todo['title']}, Completed: #{todo['completed']}"
+    end
+  end
+
+  threads.each(&:join)
+end
+
+main if __FILE__ == $PROGRAM_NAME
